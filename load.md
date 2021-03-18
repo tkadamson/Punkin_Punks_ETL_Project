@@ -10,6 +10,6 @@ Steps taken to load transformed data to a Mongo Database
 
 3) Connect to our MongoDB, create a database and declare the collection
 
-4) Create a for loop to itterate through the rows of data in the csv and load each row to our Mongo Databse
+4) Create a for loop to itterate through the rows of data in the csv and load each row to our Mongo Database
 
 5) Verify our results are in the Mongo Database
