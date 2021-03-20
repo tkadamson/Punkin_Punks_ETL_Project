@@ -1,18 +1,32 @@
 # Punkin_Punks_ETL_Project
 
-### Project Proposal
+## Extract
 
-For the ETL, we will use the 2019 data from the following datasets:
-* World Happiness Report from the Sustainable Development Solutions Network: https://www.kaggle.com/unsdsn/world-happiness
-* GDP per Capita (USD): https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?view=chart
-* Gross Savings (% of GDP): https://data.worldbank.org/indicator/NY.GNS.ICTR.ZS?view=chart
-* Inflation, consumer prices (annual %): https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?view=chart
+1) Loaded all csv's into Pandas DataFrames
 
-Once these are extracted and cleaned, we will use Jupyter Notebook to join the different metrics by country. The World Happiness index has the smallest number of countries, so we will only keep data for those countries and drop the rest from the World Bank.
+2) Dropped all columns except the country name and the score.
+ 
+3) For the dataframes from the World Bank, we selected only the country name and 2019 data, effectively removing the other columns. 
 
-After transforming these data into one dataframe, we will load it into a Mongo Database by country.
+4) Renamed the '2019' column to indicate which indicator we were working with in that dataframe.
 
-#### Timeline
-The repo has already created with Thomas as the repo owner. 
+5) Dropped all null values, since we only had the one column in each dataframe. 
 
-Thomas will work on extracting the csv's and cleaning them in advance of Wednesday's class. Wednesday we'll work on the joining of the tables in Pandas and start the load process if there's time. Saturday we will finish the load process and clean up our repo and do a final report in the README. 
+6) Exported them as a csv back out the resources folder for next steps.
+
+## Load data to MongoDB
+
+Steps taken to load transformed data to a Mongo Database
+
+1) Import dependencies into Jupyter Notebook
+    * pymongo
+    * pandas as pd
+    
+2) Read in the transformed clean csv file from the Transform step
+
+3) Connect to our MongoDB, create a database and declare the collection
+
+4) Create a for loop to itterate through the rows of data in the csv and load each row to our Mongo Database
+
+5) Verify our results are in the Mongo Database
+
