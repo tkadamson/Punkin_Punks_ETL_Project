@@ -1,5 +1,7 @@
 # Punkin_Punks_ETL_Project
 
+Here is the description for our ETL Project on happiness data and other world data:
+
 ## Extract
 
 1) Loaded all csv's into Pandas DataFrames
@@ -15,7 +17,7 @@
 6) Exported them as a csv back out the resources folder for next steps.
 
 
-## Transforming the data
+## Transform
 
 1) Tables were cleaned so they would be concise.
     * Clean_Happiness, which has Country Name and Happiness Rank.
@@ -30,7 +32,7 @@
 4) The World_Well_Being table is exported into a csv file.
 
 
-## Load data to MongoDB
+## Load to Mongo
 
 Steps taken to load transformed data to a Mongo Database
 
