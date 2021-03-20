@@ -27,9 +27,9 @@ Here is the description for our ETL Project on happiness data and other world da
 
 2) The cleaned tables were converted into dataframes
 
-3) The dataframes were joined into one large table, **World_Well_Being**, through multiple left outer joins.
+3) The dataframes were joined into one large table, **World_Well_Being**, through multiple left joins.
     
-4) The World_Well_Being table is exported into a csv file.
+4) The World_Well_Being table was exported into a csv file.
 
 
 ## Load to Mongo
